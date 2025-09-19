@@ -1,5 +1,5 @@
-public class Hello{
-public static void main(String[] args){
-System.out.println("Thme changed successfully");
-}
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Theme changed successfully");
+    }
 }
