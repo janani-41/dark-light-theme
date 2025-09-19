@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark/Light Theme Switch</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .light {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .dark {
+      background: #121212;
+      color: #ffffff;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .light button {
+      background: #000;
+      color: #fff;
+    }
+
+    .dark button {
+      background: #fff;
+      color: #000;
+    }
+  </style>
+</head>
+<body class="light">
+  <h1>Dark/Light Theme Switch</h1>
+  <p>Click the button to toggle between Dark and Light mode.</p>
+  <button onclick="toggleTheme()">Toggle Theme</button>
+
+  <script>
+    function toggleTheme() {
+      let body = document.body;
+      if (body.classList.contains("light")) {
+        body.classList.remove("light");
+        body.classList.add("dark");
+      } else {
+        body.classList.remove("dark");
+        body.classList.add("light");
+      }
+    }
+  </script>
+</body>
+</html>
